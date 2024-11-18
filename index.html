@@ -48,6 +48,46 @@
             from { bottom: -100%; }
             to { bottom: 100%; }
         }
+        .image-slider {
+            width: 100%;
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #00ff00;
+            background-color: #1a1a1a;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+        .slider-title {
+            text-align: center;
+            background-color: #E6FFE6;
+            color: #0000FF;
+            padding: 5px;
+            margin: 0;
+        }
+        .slider-container {
+            display: flex;
+            position: absolute;
+            transition: transform 0.5s ease;
+            animation: slideLeft 45s linear infinite;
+        }
+        .slider-image {
+            min-width: 200px;
+            height: 170px;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .slider-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid white;
+        }
+        @keyframes slideLeft {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-3000px); } /* Adjust based on total images */
+        }
     </style>
 </head>
 <body>
@@ -74,6 +114,20 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 allowfullscreen>
             </iframe>
+        </div>
+
+        <div class="image-slider">
+            <h3 class="slider-title">GÓC GAME THỦ</h3>
+            <div class="slider-container">
+                <!-- Thêm 15 ảnh tại đây -->
+                <div class="slider-image">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgNppzrONrXYL9dQSSmv9l63ICyZgqC0iuXbKh2yKtMwrIWOYfCHZ07k7o1x6kNzNEyvr76q1rR9MGWSH6SUVmmUQob9uPAwBWUA1NQiiD5i_2MGq0h78-BK60ghLtixxEfckRnKKN1pM/s320/avatar+dep+%25282%2529-722292.jpg" alt="Game 1">
+                </div>
+                <div class="slider-image">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxO0DpiqljPO7rmoVmnxTjdpNBIJbEYYT_2w_b8ZlQJ6-Cir9ODzXkNIAP25JVh-b-JWoJW2uAeU3mZqSdMsBZ2dIZ-2eq5nFvMvRRBw4KjGe5c6hnualBbzCpNPRAQ3x4QkzSk5g4rr8/s320/avatar+dep+%25286%2529-729295.jpg" alt="Game 2">
+                </div>
+                <!-- Thêm thêm 13 ảnh nữa -->
+            </div>
         </div>
 
         <div class="text-box">

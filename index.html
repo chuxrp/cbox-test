@@ -25,6 +25,29 @@
             background-color: #2a2a2a;
             padding: 10px;
         }
+        .text-box {
+            width: 100%;
+            height: 300px;
+            border: 1px solid #0000FF;
+            background-color: #E6FFE6;
+            overflow: hidden;
+            position: relative;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+        .text-content {
+            position: absolute;
+            bottom: -100%;
+            width: 100%;
+            padding: 20px;
+            animation: scrollUp 30s linear infinite;
+            text-align: center;
+            color: #000;
+        }
+        @keyframes scrollUp {
+            from { bottom: -100%; }
+            to { bottom: 100%; }
+        }
     </style>
 </head>
 <body>
@@ -42,15 +65,30 @@
         </iframe>
         
         <div class="music-player">
-       <iframe 
-    width="560" 
-    height="315" 
-    src="https://www.youtube.com/embed/U7UO_mltuqw?si=64nLh4X4B0qsK-LE&amp;start=74&amp;autoplay=1" 
-    title="YouTube video player" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    allowfullscreen>
-</iframe>
+            <iframe 
+                width="100%" 
+                height="315" 
+                src="https://www.youtube.com/embed/U7UO_mltuqw?si=64nLh4X4B0qsK-LE&amp;start=74&amp;autoplay=1&amp;mute=1" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="text-box">
+            <div class="text-content">
+                <h3>LỜI MUỐN NÓI</h3>
+                <p>Giả như tớ hiểu được điều giản đơn sau những tiếng thở dài, sau ánh mắt, nụ cười, sau cái nhìn xa xôi, sau những nét trầm tư trên gương mặt ấy..</p>
+                <p>Và mỗi khi nghĩ về TỚ ...</p>
+                <p>Giả như ẤY đừng bao giờ nghĩ rằng thì sĩ biết làm thơ ..., bởi vì thế mà họ mơ rất giỏi ....</p>
+                <p>Giả như ẤY đừng bao giờ nghĩ rằng nhà văn biết viết truyện ..., bởi vì thế mà họ biết rất tài ...</p>
+                <p>TỚ có thể là thì sĩ, là nhà văn hay một người viết kịch, TỚ có thể tô màu lên những điều nhọc nhằn của cuộc sống, nhưng những nhu trai tìm tòi lại là điều mà chẳng bao giờ TỚ có thể viết thành lời !</p>
+                <p>Đơn giản vậy thôi ... !</p>
+                <p>TỚ YÊU ẤY ! ...</p>
+                <p>.... và giả như có một sự đọc ngược lại để đừng bao giờ có một dấu "chấm" sau tất cả những điều được viết từ những nỗi niềm với bạn !</p>
+                <p>TỚ ... !</p>
+            </div>
         </div>
     </div>
 </body>

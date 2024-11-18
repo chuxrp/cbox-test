@@ -3,21 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embedded Chat</title>
+    <title>Chat & Music Player</title>
     <style>
         body {
             margin: 0;
             padding: 20px;
             font-family: Arial, sans-serif;
-            background-color: #f0f2f5; /* Màu nền xám nhẹ */
+            background-color: #f0f2f5;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background-color: white; /* Khối trắng chứa iframe */
+            background-color: white;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .music-player {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            color: white;
+        }
+        .playlist {
+            list-style: none;
+            padding: 0;
+        }
+        .playlist li {
+            padding: 10px;
+            border-bottom: 1px solid #333;
+            cursor: pointer;
+        }
+        .playlist li:hover {
+            background-color: #333;
+        }
+        .current-song {
+            background-color: #444;
+        }
+        audio {
+            width: 100%;
+            margin: 10px 0;
         }
     </style>
 </head>
@@ -34,6 +60,27 @@
             marginwidth="0" 
             scrolling="auto">
         </iframe>
+        
+        <div class="music-player">
+            <audio id="audio-player" controls>
+                <source src="URL_CUA_BAI_HAT" type="audio/mpeg">
+            </audio>
+            <ul class="playlist">
+                <li onclick="playSong('https://www.nhaccuatui.com/bai-hat/aloha-audition.oci4FbiqCh.html')">1. Aloha - Audition</li>
+                <li onclick="playSong('https://www.nhaccuatui.com/bai-hat/cau-vong-khuyet-tuan-hung.hh8YUwYLhJO2.html')">2. Người Đến Sau - HKT</li>
+                <li onclick="playSong('https://www.nhaccuatui.com/bai-hat/cau-vong-khuyet-tuan-hung.hh8YUwYLhJO2.html')">3. Cầu Vồng Khuyết - Tuấn Hưng</li>
+                <li onclick="playSong('https://www.nhaccuatui.com/bai-hat/cau-vong-khuyet-tuan-hung.hh8YUwYLhJO2.html')">4. Con Đường Mưa - Cao Thái Sơn</li>
+                <li onclick="playSong('https://www.nhaccuatui.com/bai-hat/cau-vong-khuyet-tuan-hung.hh8YUwYLhJO2.html')">5. Trang Giấy Trắng - Phạm Trưởng</li>
+            </ul>
+        </div>
     </div>
+
+    <script>
+        function playSong(url) {
+            const player = document.getElementById('audio-player');
+            player.src = url;
+            player.play();
+        }
+    </script>
 </body>
 </html>

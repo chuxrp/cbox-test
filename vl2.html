@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website đang hoàn thiện</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            max-width: 800px;
+            width: 100%;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .countdown {
+            font-size: 32px;
+            font-weight: bold;
+            color: #1877f2;
+            margin: 20px 0;
+        }
+        .countdown span {
+            padding: 10px;
+            background: #f0f2f5;
+            border-radius: 5px;
+            margin: 0 5px;
+        }
+        .message {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .link {
+            color: #1877f2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+        .chat-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 30px 0 15px 0;
+            color: #333;
+        }
+        .chat-container {
+            width: 100%;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            WEBSITE SẼ MỞ SAU:
+        </div>
+        <div class="countdown" id="countdown">
+            <span id="days">00</span>ngày
+            <span id="hours">00</span>giờ
+            <span id="minutes">00</span>phút
+            <span id="seconds">00</span>giây
+        </div>
+        <div class="message">
+            Mời huynh đệ ghé 
+            <a href="https://facebook.com/vl2tuongphung" class="link" target="_blank">fanpage</a> 
+            để hội ngộ cùng ae và săn code, thẻ cào, quà tặng .... nhé
+        </div>
+        
+        <div class="chat-title">
+            CHAT CHÍT ONLINE - 8X,9X HOÀI NIỆM
+        </div>
+        <div class="chat-container">
+            <iframe src="https://www5.cbox.ws/box/?boxid=954216&boxtag=VA6RBm" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+        </div>
+    </div>
+
+    <script>
+        const countDownDate = new Date("Nov 25, 2024 20:00:00").getTime();
+
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "WEBSITE ĐÃ MỞ!";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
